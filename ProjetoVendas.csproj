@@ -115,5 +115,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="br.com.vendas.conexao\" />
+    <Folder Include="br.com.vendas.dao\" />
+    <Folder Include="br.com.vendas.view\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
