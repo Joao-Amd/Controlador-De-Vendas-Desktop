@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoVendas.br.com.vendas.model;
+using ProjetoVendas.br.com.vendas.view;
 
 namespace ProjetoVendas.br.com.vendas.view
 {
@@ -105,6 +107,25 @@ namespace ProjetoVendas.br.com.vendas.view
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnsalvar_Click(object sender, EventArgs e)
+        {
+            Cliente obj = new Cliente();
+            obj.Nome = txtnome.Text;
+            obj.Rg = txtrg.Text;
+            obj.Cpf = txtcpf.Text;
+            obj.Email = txtemail.Text;
+            obj.Telefone = txttelefone.Text;
+            obj.Celular = txtcelular.Text;
+            obj.Cep = txtcep.Text;
+            obj.Endereco = txtendereco.Text;
+            obj.Numero = int.Parse(txtnumero.Text);
+            obj.Complemento = txtcomplemento.Text;
+            obj.Bairro = txtbairro.Text;
+            obj.Cidade = txtcidade.Text;
+            obj.Estado = txtuf.Text;
+           
         }
     }
 }
