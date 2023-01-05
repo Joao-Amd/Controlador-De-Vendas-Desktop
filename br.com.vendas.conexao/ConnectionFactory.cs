@@ -10,7 +10,8 @@ namespace ProjetoVendas.br.com.vendas.conexao
 {
     public class ConnectionFactory
     {
-        public MySqlConnection getConnection()
+        //metado que conecta o banco  de dados
+        public MySqlConnection GetConnection()
         {
             string conexao = ConfigurationManager.ConnectionStrings["bdvendas"].ConnectionString;
             return new MySqlConnection(conexao);

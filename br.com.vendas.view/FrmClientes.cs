@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoVendas.br.com.vendas.dao;
 using ProjetoVendas.br.com.vendas.model;
 using ProjetoVendas.br.com.vendas.view;
 
@@ -111,7 +112,9 @@ namespace ProjetoVendas.br.com.vendas.view
 
         private void btnsalvar_Click(object sender, EventArgs e)
         {
+            //1 passo - Receber os dados dentro do objeto modelo de cliente
             Cliente obj = new Cliente();
+
             obj.Nome = txtnome.Text;
             obj.Rg = txtrg.Text;
             obj.Cpf = txtcpf.Text;
@@ -125,6 +128,10 @@ namespace ProjetoVendas.br.com.vendas.view
             obj.Bairro = txtbairro.Text;
             obj.Cidade = txtcidade.Text;
             obj.Estado = txtuf.Text;
+
+            //2 passo - Criar um objeto da classe ClienteDAO e chammar o metado cadastraCliente
+            ClienteDAO dao = new ClienteDAO();
+            dao.cadastrarCliente(obj);
            
         }
     }
