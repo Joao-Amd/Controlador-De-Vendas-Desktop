@@ -61,14 +61,15 @@
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabClientes = new System.Windows.Forms.TabPage();
+            this.tabelaClientes = new System.Windows.Forms.DataGridView();
+            this.btnpesquisa = new System.Windows.Forms.Button();
+            this.txtpesquisa = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.btnnovo = new System.Windows.Forms.Button();
             this.btnsalvar = new System.Windows.Forms.Button();
             this.btnexcluir = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
-            this.txtpesquisa = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.btnpesquisa = new System.Windows.Forms.Button();
-            this.tabelaClientes = new System.Windows.Forms.DataGridView();
+            this.btnbuscar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -84,7 +85,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(905, 106);
+            this.panel1.Size = new System.Drawing.Size(898, 106);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -111,6 +112,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnbuscar);
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.txtuf);
             this.tabPage1.Controls.Add(this.txtnumero);
@@ -451,6 +453,49 @@
             this.tabClientes.Text = "Consulta";
             this.tabClientes.UseVisualStyleBackColor = true;
             // 
+            // tabelaClientes
+            // 
+            this.tabelaClientes.AllowUserToAddRows = false;
+            this.tabelaClientes.AllowUserToDeleteRows = false;
+            this.tabelaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabelaClientes.Location = new System.Drawing.Point(6, 56);
+            this.tabelaClientes.Name = "tabelaClientes";
+            this.tabelaClientes.ReadOnly = true;
+            this.tabelaClientes.Size = new System.Drawing.Size(877, 468);
+            this.tabelaClientes.TabIndex = 9;
+            this.tabelaClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaClientes_CellClick);
+            this.tabelaClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaClientes_CellContentClick);
+            // 
+            // btnpesquisa
+            // 
+            this.btnpesquisa.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnpesquisa.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnpesquisa.Location = new System.Drawing.Point(451, 19);
+            this.btnpesquisa.Name = "btnpesquisa";
+            this.btnpesquisa.Size = new System.Drawing.Size(97, 31);
+            this.btnpesquisa.TabIndex = 8;
+            this.btnpesquisa.Text = "Pesquisar";
+            this.btnpesquisa.UseVisualStyleBackColor = false;
+            this.btnpesquisa.Click += new System.EventHandler(this.btnpesquisa_Click);
+            // 
+            // txtpesquisa
+            // 
+            this.txtpesquisa.Location = new System.Drawing.Point(79, 22);
+            this.txtpesquisa.Name = "txtpesquisa";
+            this.txtpesquisa.Size = new System.Drawing.Size(356, 26);
+            this.txtpesquisa.TabIndex = 7;
+            this.txtpesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpesquisa_KeyPress);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label16.Location = new System.Drawing.Point(19, 27);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(54, 18);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "Nome:";
+            // 
             // btnnovo
             // 
             this.btnnovo.BackColor = System.Drawing.SystemColors.Highlight;
@@ -461,6 +506,7 @@
             this.btnnovo.TabIndex = 2;
             this.btnnovo.Text = "Novo";
             this.btnnovo.UseVisualStyleBackColor = false;
+            this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click);
             // 
             // btnsalvar
             // 
@@ -496,51 +542,25 @@
             this.btneditar.TabIndex = 5;
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = false;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
-            // txtpesquisa
+            // btnbuscar
             // 
-            this.txtpesquisa.Location = new System.Drawing.Point(79, 22);
-            this.txtpesquisa.Name = "txtpesquisa";
-            this.txtpesquisa.Size = new System.Drawing.Size(356, 26);
-            this.txtpesquisa.TabIndex = 7;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label16.Location = new System.Drawing.Point(19, 27);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(54, 18);
-            this.label16.TabIndex = 6;
-            this.label16.Text = "Nome:";
-            // 
-            // btnpesquisa
-            // 
-            this.btnpesquisa.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnpesquisa.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnpesquisa.Location = new System.Drawing.Point(451, 19);
-            this.btnpesquisa.Name = "btnpesquisa";
-            this.btnpesquisa.Size = new System.Drawing.Size(97, 31);
-            this.btnpesquisa.TabIndex = 8;
-            this.btnpesquisa.Text = "Pesquisar";
-            this.btnpesquisa.UseVisualStyleBackColor = false;
-            // 
-            // tabelaClientes
-            // 
-            this.tabelaClientes.AllowUserToAddRows = false;
-            this.tabelaClientes.AllowUserToDeleteRows = false;
-            this.tabelaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabelaClientes.Location = new System.Drawing.Point(6, 56);
-            this.tabelaClientes.Name = "tabelaClientes";
-            this.tabelaClientes.ReadOnly = true;
-            this.tabelaClientes.Size = new System.Drawing.Size(877, 468);
-            this.tabelaClientes.TabIndex = 9;
+            this.btnbuscar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnbuscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnbuscar.Location = new System.Drawing.Point(508, 193);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(89, 27);
+            this.btnbuscar.TabIndex = 29;
+            this.btnbuscar.Text = "Pesquisar";
+            this.btnbuscar.UseVisualStyleBackColor = false;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(905, 820);
+            this.ClientSize = new System.Drawing.Size(898, 756);
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnexcluir);
             this.Controls.Add(this.btnsalvar);
@@ -608,5 +628,6 @@
         private System.Windows.Forms.Button btnpesquisa;
         private System.Windows.Forms.TextBox txtpesquisa;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btnbuscar;
     }
 }

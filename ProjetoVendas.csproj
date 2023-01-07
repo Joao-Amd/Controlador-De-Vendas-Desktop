@@ -87,6 +87,7 @@
     <Compile Include="br.com.vendas.conexao\ConnectionFactory.cs" />
     <Compile Include="br.com.vendas.dao\ClienteDAO.cs" />
     <Compile Include="br.com.vendas.model\Cliente.cs" />
+    <Compile Include="br.com.vendas.model\Helpers.cs" />
     <Compile Include="br.com.vendas.view\FrmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
