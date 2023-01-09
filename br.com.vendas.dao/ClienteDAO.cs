@@ -200,6 +200,7 @@ namespace ProjetoVendas.br.com.vendas.dao
             {
                 MessageBox.Show("Erro ao executar o comando sql: " + erro);
                 return null;
+                
             }
 
         }
