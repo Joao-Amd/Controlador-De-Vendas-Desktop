@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnbuscar = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.txtuf = new System.Windows.Forms.ComboBox();
             this.txtnumero = new System.Windows.Forms.TextBox();
@@ -69,7 +70,6 @@
             this.btnsalvar = new System.Windows.Forms.Button();
             this.btnexcluir = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
-            this.btnbuscar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -150,6 +150,18 @@
             this.tabPage1.Text = "Dados pessoas";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnbuscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnbuscar.Location = new System.Drawing.Point(508, 193);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(89, 27);
+            this.btnbuscar.TabIndex = 29;
+            this.btnbuscar.Text = "Pesquisar";
+            this.btnbuscar.UseVisualStyleBackColor = false;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // label15
             // 
@@ -484,6 +496,7 @@
             this.txtpesquisa.Name = "txtpesquisa";
             this.txtpesquisa.Size = new System.Drawing.Size(356, 26);
             this.txtpesquisa.TabIndex = 7;
+            this.txtpesquisa.TextChanged += new System.EventHandler(this.txtpesquisa_TextChanged);
             this.txtpesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpesquisa_KeyPress);
             // 
             // label16
@@ -543,18 +556,6 @@
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = false;
             this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
-            // 
-            // btnbuscar
-            // 
-            this.btnbuscar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnbuscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnbuscar.Location = new System.Drawing.Point(508, 193);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(89, 27);
-            this.btnbuscar.TabIndex = 29;
-            this.btnbuscar.Text = "Pesquisar";
-            this.btnbuscar.UseVisualStyleBackColor = false;
-            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // FrmClientes
             // 

@@ -32,6 +32,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label = new System.Windows.Forms.Label();
+            this.cbnivel = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.cbcargo = new System.Windows.Forms.ComboBox();
             this.txtsenha = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.btnbuscar = new System.Windows.Forms.Button();
@@ -72,10 +76,6 @@
             this.btnexcluir = new System.Windows.Forms.Button();
             this.btnsalvar = new System.Windows.Forms.Button();
             this.btnnovo = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
-            this.cbcargo = new System.Windows.Forms.ComboBox();
-            this.label = new System.Windows.Forms.Label();
-            this.cbnivel = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -160,6 +160,51 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dados pessoas";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label.Location = new System.Drawing.Point(725, 60);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(46, 18);
+            this.label.TabIndex = 35;
+            this.label.Text = "Nivel:";
+            // 
+            // cbnivel
+            // 
+            this.cbnivel.FormattingEnabled = true;
+            this.cbnivel.Items.AddRange(new object[] {
+            "Administrador",
+            "Usuario"});
+            this.cbnivel.Location = new System.Drawing.Point(777, 57);
+            this.cbnivel.Name = "cbnivel";
+            this.cbnivel.Size = new System.Drawing.Size(105, 26);
+            this.cbnivel.TabIndex = 34;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label20.Location = new System.Drawing.Point(518, 97);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(56, 18);
+            this.label20.TabIndex = 33;
+            this.label20.Text = "Cargo:";
+            this.label20.Click += new System.EventHandler(this.label18_Click);
+            // 
+            // cbcargo
+            // 
+            this.cbcargo.FormattingEnabled = true;
+            this.cbcargo.Items.AddRange(new object[] {
+            "Gerente",
+            "Vendedor",
+            "Estagiário"});
+            this.cbcargo.Location = new System.Drawing.Point(579, 92);
+            this.cbcargo.Name = "cbcargo";
+            this.cbcargo.Size = new System.Drawing.Size(105, 26);
+            this.cbcargo.TabIndex = 32;
+            this.cbcargo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // txtsenha
             // 
@@ -576,51 +621,6 @@
             this.btnnovo.Text = "Novo";
             this.btnnovo.UseVisualStyleBackColor = false;
             this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label20.Location = new System.Drawing.Point(518, 97);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(56, 18);
-            this.label20.TabIndex = 33;
-            this.label20.Text = "Cargo:";
-            this.label20.Click += new System.EventHandler(this.label18_Click);
-            // 
-            // cbcargo
-            // 
-            this.cbcargo.FormattingEnabled = true;
-            this.cbcargo.Items.AddRange(new object[] {
-            "Gerente",
-            "Vendedor",
-            "Estagiário"});
-            this.cbcargo.Location = new System.Drawing.Point(579, 92);
-            this.cbcargo.Name = "cbcargo";
-            this.cbcargo.Size = new System.Drawing.Size(105, 26);
-            this.cbcargo.TabIndex = 32;
-            this.cbcargo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label.Location = new System.Drawing.Point(725, 60);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(46, 18);
-            this.label.TabIndex = 35;
-            this.label.Text = "Nivel:";
-            // 
-            // cbnivel
-            // 
-            this.cbnivel.FormattingEnabled = true;
-            this.cbnivel.Items.AddRange(new object[] {
-            "Administrador",
-            "Usuario"});
-            this.cbnivel.Location = new System.Drawing.Point(777, 57);
-            this.cbnivel.Name = "cbnivel";
-            this.cbnivel.Size = new System.Drawing.Size(105, 26);
-            this.cbnivel.TabIndex = 34;
             // 
             // FrmFuncionarios
             // 

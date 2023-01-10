@@ -230,16 +230,13 @@ namespace ProjetoVendas.br.com.vendas.view
                 //Recarregar o datagridview
                 tabelaClientes.DataSource = dao.ListarCliente();
             }
+            nome = "%" + txtpesquisa.Text + "%";
+            tabelaClientes.DataSource = dao.ListarClientePorNome(nome);
 
         }
 
         private void txtpesquisa_KeyPress(object sender, KeyPressEventArgs e)
         {
-            string nome = "%" + txtpesquisa.Text + "%";
-
-            ClienteDAO dao = new ClienteDAO();
-
-            tabelaClientes.DataSource = dao.ListarClientePorNome(nome);
 
             
         }
@@ -273,6 +270,11 @@ namespace ProjetoVendas.br.com.vendas.view
 
             //Limpar Tela
             new Helpers().LimparTela(this);
+        }
+
+        private void txtpesquisa_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

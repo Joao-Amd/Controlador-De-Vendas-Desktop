@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjetoVendas.br.com.vendas.dao;
+using ProjetoVendas.br.com.vendas.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,7 +46,30 @@ namespace ProjetoVendas.br.com.vendas.view
 
         private void btnsalvar_Click(object sender, EventArgs e)
         {
+            //Receber os dados dentro do objeto modelo de cliente
+            Funcionario obj = new Funcionario();
 
+            obj.Nome = txtnome.Text;
+            obj.Rg = txtrg.Text;
+            obj.Cpf = txtcpf.Text;
+            obj.Email = txtemail.Text;
+            obj.Senha = txtsenha.Text;
+            obj.Cargo = cbcargo.Text;
+            obj.NivelAcesso = cbnivel.Text;
+            obj.Telefone = txttelefone.Text;
+            obj.Celular = txtcelular.Text;
+            obj.Cep = txtcep.Text;
+            obj.Endereco = txtendereco.Text;
+            obj.Numero = int.Parse(txtnumero.Text);
+            obj.Complemento = txtcomplemento.Text;
+            obj.Bairro = txtbairro.Text;
+            obj.Cidade = txtcidade.Text;
+            obj.Estado = txtuf.Text;
+
+            FuncionarioDAO dao = new FuncionarioDAO();
+            dao.CadastrarFuncionarios(obj);
+
+            new Helpers().LimparTela(this);
         }
 
         private void btnexcluir_Click(object sender, EventArgs e)
