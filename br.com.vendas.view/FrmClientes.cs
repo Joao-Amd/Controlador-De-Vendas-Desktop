@@ -276,5 +276,10 @@ namespace ProjetoVendas.br.com.vendas.view
         {
 
         }
+
+        private void txtcodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

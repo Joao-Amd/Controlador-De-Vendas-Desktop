@@ -67,7 +67,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tabClientes = new System.Windows.Forms.TabPage();
+            this.tabFuncionario = new System.Windows.Forms.TabPage();
             this.tabelaFuncionario = new System.Windows.Forms.DataGridView();
             this.btnpesquisa = new System.Windows.Forms.Button();
             this.txtpesquisa = new System.Windows.Forms.TextBox();
@@ -79,7 +79,7 @@
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabClientes.SuspendLayout();
+            this.tabFuncionario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaFuncionario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,7 +108,7 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabClientes);
+            this.tabControl1.Controls.Add(this.tabFuncionario);
             this.tabControl1.Location = new System.Drawing.Point(12, 114);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -235,6 +235,7 @@
             this.btnbuscar.TabIndex = 29;
             this.btnbuscar.Text = "Pesquisar";
             this.btnbuscar.UseVisualStyleBackColor = false;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // label15
             // 
@@ -520,20 +521,20 @@
             this.label2.Text = "Codigo:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // tabClientes
+            // tabFuncionario
             // 
-            this.tabClientes.Controls.Add(this.tabelaFuncionario);
-            this.tabClientes.Controls.Add(this.btnpesquisa);
-            this.tabClientes.Controls.Add(this.txtpesquisa);
-            this.tabClientes.Controls.Add(this.label16);
-            this.tabClientes.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabClientes.Location = new System.Drawing.Point(4, 27);
-            this.tabClientes.Name = "tabClientes";
-            this.tabClientes.Padding = new System.Windows.Forms.Padding(3);
-            this.tabClientes.Size = new System.Drawing.Size(905, 449);
-            this.tabClientes.TabIndex = 1;
-            this.tabClientes.Text = "Consulta";
-            this.tabClientes.UseVisualStyleBackColor = true;
+            this.tabFuncionario.Controls.Add(this.tabelaFuncionario);
+            this.tabFuncionario.Controls.Add(this.btnpesquisa);
+            this.tabFuncionario.Controls.Add(this.txtpesquisa);
+            this.tabFuncionario.Controls.Add(this.label16);
+            this.tabFuncionario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabFuncionario.Location = new System.Drawing.Point(4, 27);
+            this.tabFuncionario.Name = "tabFuncionario";
+            this.tabFuncionario.Padding = new System.Windows.Forms.Padding(3);
+            this.tabFuncionario.Size = new System.Drawing.Size(905, 449);
+            this.tabFuncionario.TabIndex = 1;
+            this.tabFuncionario.Text = "Consulta";
+            this.tabFuncionario.UseVisualStyleBackColor = true;
             // 
             // tabelaFuncionario
             // 
@@ -545,6 +546,7 @@
             this.tabelaFuncionario.ReadOnly = true;
             this.tabelaFuncionario.Size = new System.Drawing.Size(877, 468);
             this.tabelaFuncionario.TabIndex = 9;
+            this.tabelaFuncionario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaFuncionario_CellContentClick);
             // 
             // btnpesquisa
             // 
@@ -556,6 +558,7 @@
             this.btnpesquisa.TabIndex = 8;
             this.btnpesquisa.Text = "Pesquisar";
             this.btnpesquisa.UseVisualStyleBackColor = false;
+            this.btnpesquisa.Click += new System.EventHandler(this.btnpesquisa_Click);
             // 
             // txtpesquisa
             // 
@@ -563,6 +566,7 @@
             this.txtpesquisa.Name = "txtpesquisa";
             this.txtpesquisa.Size = new System.Drawing.Size(356, 26);
             this.txtpesquisa.TabIndex = 7;
+            this.txtpesquisa.TextChanged += new System.EventHandler(this.txtpesquisa_TextChanged);
             // 
             // label16
             // 
@@ -642,8 +646,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabClientes.ResumeLayout(false);
-            this.tabClientes.PerformLayout();
+            this.tabFuncionario.ResumeLayout(false);
+            this.tabFuncionario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaFuncionario)).EndInit();
             this.ResumeLayout(false);
 
@@ -684,7 +688,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TabPage tabClientes;
+        private System.Windows.Forms.TabPage tabFuncionario;
         private System.Windows.Forms.DataGridView tabelaFuncionario;
         private System.Windows.Forms.Button btnpesquisa;
         private System.Windows.Forms.TextBox txtpesquisa;
