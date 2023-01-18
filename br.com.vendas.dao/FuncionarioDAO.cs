@@ -71,9 +71,9 @@ namespace ProjetoVendas.br.com.vendas.dao
             try
             {
                 //  definir o cmd sql  - Update
-                string sql = @"update tb_funcionarios (nome=@nome,rg=@rg,cpf=@cpf,email=@email,senha=@senha,cargo=@cargo,nivel_acesso=@nivel_acesso,telefone=@telefone,celular=@celular,cep=@cep,
-                            endereco=@endereco,numero=@numero,complemento=@complemento,bairro=@bairro,cidade=@cidade,estado=@estado)
-                            where id=@id";
+                string sql = @"update tb_funcionarios set nome=@nome,rg=@rg,cpf=@cpf,email=@email,senha=@senha,cargo=@cargo,nivel_acesso=@nivel_acesso,
+                             telefone=@telefone,celular=@celular,cep=@cep,endereco=@endereco,numero=@numero,complemento=@complemento,bairro=@bairro,
+                             cidade=@cidade,estado=@estado where id=@id";
 
                 //Organizar o cmd sql
                 MySqlCommand executacmd = new MySqlCommand(sql, Conexao);
@@ -121,13 +121,13 @@ namespace ProjetoVendas.br.com.vendas.dao
             try
             {
                 //  definir o cmd sql  - delete
-                string sql = @"delete from tb_funcionarios where id = @id";
+                string sql = @"delete from tb_funcionarios where id = @codigo";
 
                 //Organizar o cmd sql
                 MySqlCommand executacmd = new MySqlCommand(sql, Conexao);
 
 
-                executacmd.Parameters.AddWithValue("@id", obj.Codigo);
+                executacmd.Parameters.AddWithValue("@codigo", obj.Codigo);
 
                 // Abrir a conexao e executar o comando sql
                 Conexao.Open();

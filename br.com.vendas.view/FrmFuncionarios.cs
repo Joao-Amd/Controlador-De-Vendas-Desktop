@@ -254,6 +254,31 @@ namespace ProjetoVendas.br.com.vendas.view
             //Alterar para a gui Dados Pessoais
             tabControl1.SelectedTab = tabPage1;
         }
+
+        private void txtcodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmFuncionarios_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabFuncionario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

@@ -1,6 +1,6 @@
 ﻿namespace ProjetoVendas.br.com.vendas.view
 {
-    partial class FrmFuncionarios
+    partial class FrmFornecedores
     {
         /// <summary>
         /// Required designer variable.
@@ -72,10 +72,6 @@
             this.btnpesquisa = new System.Windows.Forms.Button();
             this.txtpesquisa = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.btneditar = new System.Windows.Forms.Button();
-            this.btnexcluir = new System.Windows.Forms.Button();
-            this.btnsalvar = new System.Windows.Forms.Button();
-            this.btnnovo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -91,30 +87,31 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1196, 106);
-            this.panel1.TabIndex = 1;
+            this.panel1.Size = new System.Drawing.Size(1120, 106);
+            this.panel1.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(52, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 18);
+            this.label1.Size = new System.Drawing.Size(228, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cadastro de Funcionário";
+            this.label1.Text = "Cadastro de fornecedores";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabFuncionario);
-            this.tabControl1.Location = new System.Drawing.Point(12, 114);
+            this.tabControl1.Location = new System.Drawing.Point(12, 123);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(913, 480);
-            this.tabControl1.TabIndex = 2;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabControl1.Size = new System.Drawing.Size(1096, 447);
+            this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
             // 
@@ -154,10 +151,10 @@
             this.tabPage1.Controls.Add(this.txtcodigo);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 27);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(905, 449);
+            this.tabPage1.Size = new System.Drawing.Size(1088, 421);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dados pessoas";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -192,7 +189,6 @@
             this.label20.Size = new System.Drawing.Size(56, 18);
             this.label20.TabIndex = 33;
             this.label20.Text = "Cargo:";
-            this.label20.Click += new System.EventHandler(this.label18_Click);
             // 
             // cbcargo
             // 
@@ -205,7 +201,6 @@
             this.cbcargo.Name = "cbcargo";
             this.cbcargo.Size = new System.Drawing.Size(105, 26);
             this.cbcargo.TabIndex = 32;
-            this.cbcargo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // txtsenha
             // 
@@ -224,7 +219,6 @@
             this.label17.Size = new System.Drawing.Size(57, 18);
             this.label17.TabIndex = 30;
             this.label17.Text = "Senha:";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // btnbuscar
             // 
@@ -236,7 +230,6 @@
             this.btnbuscar.TabIndex = 29;
             this.btnbuscar.Text = "Pesquisar";
             this.btnbuscar.UseVisualStyleBackColor = false;
-            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // label15
             // 
@@ -283,7 +276,6 @@
             this.txtuf.Name = "txtuf";
             this.txtuf.Size = new System.Drawing.Size(61, 26);
             this.txtuf.TabIndex = 27;
-            this.txtuf.SelectedIndexChanged += new System.EventHandler(this.txtuf_SelectedIndexChanged);
             // 
             // txtnumero
             // 
@@ -291,7 +283,6 @@
             this.txtnumero.Name = "txtnumero";
             this.txtnumero.Size = new System.Drawing.Size(67, 26);
             this.txtnumero.TabIndex = 25;
-            this.txtnumero.TextChanged += new System.EventHandler(this.txtnumero_TextChanged);
             // 
             // label14
             // 
@@ -302,7 +293,6 @@
             this.label14.Size = new System.Drawing.Size(67, 18);
             this.label14.TabIndex = 24;
             this.label14.Text = "Número:";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // txtbairro
             // 
@@ -310,7 +300,6 @@
             this.txtbairro.Name = "txtbairro";
             this.txtbairro.Size = new System.Drawing.Size(151, 26);
             this.txtbairro.TabIndex = 23;
-            this.txtbairro.TextChanged += new System.EventHandler(this.txtbairro_TextChanged);
             // 
             // label13
             // 
@@ -338,7 +327,6 @@
             this.label12.Size = new System.Drawing.Size(64, 18);
             this.label12.TabIndex = 20;
             this.label12.Text = "Cidade:";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // txtendereco
             // 
@@ -356,7 +344,6 @@
             this.label11.Size = new System.Drawing.Size(80, 18);
             this.label11.TabIndex = 18;
             this.label11.Text = "Endereço:";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // txtcomplemento
             // 
@@ -382,7 +369,6 @@
             this.txtcep.Name = "txtcep";
             this.txtcep.Size = new System.Drawing.Size(87, 26);
             this.txtcep.TabIndex = 15;
-            this.txtcep.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtcep_MaskInputRejected);
             // 
             // label9
             // 
@@ -401,7 +387,6 @@
             this.txtcelular.Name = "txtcelular";
             this.txtcelular.Size = new System.Drawing.Size(140, 26);
             this.txtcelular.TabIndex = 13;
-            this.txtcelular.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtcelular_MaskInputRejected);
             // 
             // label8
             // 
@@ -430,7 +415,6 @@
             this.label7.Size = new System.Drawing.Size(70, 18);
             this.label7.TabIndex = 10;
             this.label7.Text = "Telefone:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtcpf
             // 
@@ -467,7 +451,6 @@
             this.label5.Size = new System.Drawing.Size(35, 18);
             this.label5.TabIndex = 6;
             this.label5.Text = "RG:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtnome
             // 
@@ -510,7 +493,6 @@
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(87, 26);
             this.txtcodigo.TabIndex = 1;
-            this.txtcodigo.TextChanged += new System.EventHandler(this.txtcodigo_TextChanged);
             // 
             // label2
             // 
@@ -521,7 +503,6 @@
             this.label2.Size = new System.Drawing.Size(64, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Codigo:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tabFuncionario
             // 
@@ -530,14 +511,13 @@
             this.tabFuncionario.Controls.Add(this.txtpesquisa);
             this.tabFuncionario.Controls.Add(this.label16);
             this.tabFuncionario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabFuncionario.Location = new System.Drawing.Point(4, 27);
+            this.tabFuncionario.Location = new System.Drawing.Point(4, 22);
             this.tabFuncionario.Name = "tabFuncionario";
             this.tabFuncionario.Padding = new System.Windows.Forms.Padding(3);
-            this.tabFuncionario.Size = new System.Drawing.Size(905, 449);
+            this.tabFuncionario.Size = new System.Drawing.Size(905, 454);
             this.tabFuncionario.TabIndex = 1;
             this.tabFuncionario.Text = "Consulta";
             this.tabFuncionario.UseVisualStyleBackColor = true;
-            this.tabFuncionario.Click += new System.EventHandler(this.tabFuncionario_Click);
             // 
             // tabelaFuncionario
             // 
@@ -549,7 +529,6 @@
             this.tabelaFuncionario.ReadOnly = true;
             this.tabelaFuncionario.Size = new System.Drawing.Size(877, 468);
             this.tabelaFuncionario.TabIndex = 9;
-            this.tabelaFuncionario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaFuncionario_CellContentClick);
             // 
             // btnpesquisa
             // 
@@ -561,7 +540,6 @@
             this.btnpesquisa.TabIndex = 8;
             this.btnpesquisa.Text = "Pesquisar";
             this.btnpesquisa.UseVisualStyleBackColor = false;
-            this.btnpesquisa.Click += new System.EventHandler(this.btnpesquisa_Click);
             // 
             // txtpesquisa
             // 
@@ -569,7 +547,6 @@
             this.txtpesquisa.Name = "txtpesquisa";
             this.txtpesquisa.Size = new System.Drawing.Size(356, 26);
             this.txtpesquisa.TabIndex = 7;
-            this.txtpesquisa.TextChanged += new System.EventHandler(this.txtpesquisa_TextChanged);
             // 
             // label16
             // 
@@ -580,72 +557,17 @@
             this.label16.Size = new System.Drawing.Size(54, 18);
             this.label16.TabIndex = 6;
             this.label16.Text = "Nome:";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
-            // btneditar
+            // FrmFornecedores
             // 
-            this.btneditar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btneditar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btneditar.Location = new System.Drawing.Point(652, 600);
-            this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(117, 45);
-            this.btneditar.TabIndex = 9;
-            this.btneditar.Text = "Editar";
-            this.btneditar.UseVisualStyleBackColor = false;
-            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
-            // 
-            // btnexcluir
-            // 
-            this.btnexcluir.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnexcluir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnexcluir.Location = new System.Drawing.Point(493, 600);
-            this.btnexcluir.Name = "btnexcluir";
-            this.btnexcluir.Size = new System.Drawing.Size(117, 45);
-            this.btnexcluir.TabIndex = 8;
-            this.btnexcluir.Text = "Excluir";
-            this.btnexcluir.UseVisualStyleBackColor = false;
-            this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
-            // 
-            // btnsalvar
-            // 
-            this.btnsalvar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnsalvar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnsalvar.Location = new System.Drawing.Point(334, 600);
-            this.btnsalvar.Name = "btnsalvar";
-            this.btnsalvar.Size = new System.Drawing.Size(117, 45);
-            this.btnsalvar.TabIndex = 7;
-            this.btnsalvar.Text = "Salvar";
-            this.btnsalvar.UseVisualStyleBackColor = false;
-            this.btnsalvar.Click += new System.EventHandler(this.btnsalvar_Click);
-            // 
-            // btnnovo
-            // 
-            this.btnnovo.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnnovo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnnovo.Location = new System.Drawing.Point(173, 600);
-            this.btnnovo.Name = "btnnovo";
-            this.btnnovo.Size = new System.Drawing.Size(117, 45);
-            this.btnnovo.TabIndex = 6;
-            this.btnnovo.Text = "Novo";
-            this.btnnovo.UseVisualStyleBackColor = false;
-            this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click);
-            // 
-            // FrmFuncionarios
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1196, 683);
-            this.Controls.Add(this.btneditar);
-            this.Controls.Add(this.btnexcluir);
-            this.Controls.Add(this.btnsalvar);
-            this.Controls.Add(this.btnnovo);
+            this.ClientSize = new System.Drawing.Size(1120, 663);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Arial", 12F);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FrmFuncionarios";
-            this.Text = "Cadastro de Funcionários";
-            this.Load += new System.EventHandler(this.FrmFuncionarios_Load);
+            this.Name = "FrmFornecedores";
+            this.Text = "Cadastro de fornecedores";
+            this.Load += new System.EventHandler(this.FrmFornecedores_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -664,6 +586,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.ComboBox cbnivel;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox cbcargo;
+        private System.Windows.Forms.TextBox txtsenha;
+        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox txtuf;
@@ -698,15 +626,5 @@
         private System.Windows.Forms.Button btnpesquisa;
         private System.Windows.Forms.TextBox txtpesquisa;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button btneditar;
-        private System.Windows.Forms.Button btnexcluir;
-        private System.Windows.Forms.Button btnsalvar;
-        private System.Windows.Forms.Button btnnovo;
-        private System.Windows.Forms.TextBox txtsenha;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox cbcargo;
-        private System.Windows.Forms.Label label;
-        private System.Windows.Forms.ComboBox cbnivel;
     }
 }
