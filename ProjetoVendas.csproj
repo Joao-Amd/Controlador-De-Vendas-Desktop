@@ -86,8 +86,10 @@
   <ItemGroup>
     <Compile Include="br.com.vendas.conexao\ConnectionFactory.cs" />
     <Compile Include="br.com.vendas.dao\ClienteDAO.cs" />
+    <Compile Include="br.com.vendas.dao\FornecedorDAO.cs" />
     <Compile Include="br.com.vendas.dao\FuncionarioDAO.cs" />
     <Compile Include="br.com.vendas.model\Cliente.cs" />
+    <Compile Include="br.com.vendas.model\Fornecedor.cs" />
     <Compile Include="br.com.vendas.model\Funcionario.cs" />
     <Compile Include="br.com.vendas.model\Helpers.cs" />
     <Compile Include="br.com.vendas.view\FrmClientes.cs">
