@@ -444,7 +444,9 @@
             this.tabelaFornecedor.ReadOnly = true;
             this.tabelaFornecedor.Size = new System.Drawing.Size(834, 319);
             this.tabelaFornecedor.TabIndex = 9;
+            this.tabelaFornecedor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaFornecedor_CellClick);
             this.tabelaFornecedor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaFornecedor_CellContentClick);
+            
             // 
             // btnpesquisa
             // 

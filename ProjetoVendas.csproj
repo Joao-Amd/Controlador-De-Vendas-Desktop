@@ -88,10 +88,19 @@
     <Compile Include="br.com.vendas.dao\ClienteDAO.cs" />
     <Compile Include="br.com.vendas.dao\FornecedorDAO.cs" />
     <Compile Include="br.com.vendas.dao\FuncionarioDAO.cs" />
+    <Compile Include="br.com.vendas.dao\ProdutoDAO.cs" />
     <Compile Include="br.com.vendas.model\Cliente.cs" />
     <Compile Include="br.com.vendas.model\Fornecedor.cs" />
     <Compile Include="br.com.vendas.model\Funcionario.cs" />
     <Compile Include="br.com.vendas.model\Helpers.cs" />
+    <Compile Include="br.com.vendas.model\Produtos.cs" />
+    <Compile Include="br.com.vendas.view\FrmFornecedorDAO.cs" />
+    <Compile Include="br.com.vendas.view\FrmProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.vendas.view\FrmProduto.Designer.cs">
+      <DependentUpon>FrmProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.vendas.view\FrmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.vendas.view\FrmFuncionarios.resx">
       <DependentUpon>FrmFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.vendas.view\FrmProduto.resx">
+      <DependentUpon>FrmProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

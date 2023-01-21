@@ -208,14 +208,14 @@
             this.txtuf.Location = new System.Drawing.Point(679, 197);
             this.txtuf.Name = "txtuf";
             this.txtuf.Size = new System.Drawing.Size(61, 26);
-            this.txtuf.TabIndex = 27;
+            this.txtuf.TabIndex = 10;
             // 
             // txtnumero
             // 
             this.txtnumero.Location = new System.Drawing.Point(673, 274);
             this.txtnumero.Name = "txtnumero";
             this.txtnumero.Size = new System.Drawing.Size(67, 26);
-            this.txtnumero.TabIndex = 25;
+            this.txtnumero.TabIndex = 13;
             this.txtnumero.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // label14
@@ -234,7 +234,7 @@
             this.txtbairro.Location = new System.Drawing.Point(589, 236);
             this.txtbairro.Name = "txtbairro";
             this.txtbairro.Size = new System.Drawing.Size(151, 26);
-            this.txtbairro.TabIndex = 23;
+            this.txtbairro.TabIndex = 11;
             // 
             // label13
             // 
@@ -251,7 +251,7 @@
             this.txtcidade.Location = new System.Drawing.Point(362, 236);
             this.txtcidade.Name = "txtcidade";
             this.txtcidade.Size = new System.Drawing.Size(140, 26);
-            this.txtcidade.TabIndex = 21;
+            this.txtcidade.TabIndex = 9;
             this.txtcidade.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label12
@@ -270,7 +270,7 @@
             this.txtendereco.Location = new System.Drawing.Point(146, 282);
             this.txtendereco.Name = "txtendereco";
             this.txtendereco.Size = new System.Drawing.Size(356, 26);
-            this.txtendereco.TabIndex = 19;
+            this.txtendereco.TabIndex = 12;
             // 
             // label11
             // 
@@ -287,7 +287,7 @@
             this.txtcomplemento.Location = new System.Drawing.Point(146, 328);
             this.txtcomplemento.Name = "txtcomplemento";
             this.txtcomplemento.Size = new System.Drawing.Size(356, 26);
-            this.txtcomplemento.TabIndex = 17;
+            this.txtcomplemento.TabIndex = 14;
             // 
             // label10
             // 
@@ -306,7 +306,7 @@
             this.txtcep.Mask = "00000-999";
             this.txtcep.Name = "txtcep";
             this.txtcep.Size = new System.Drawing.Size(140, 26);
-            this.txtcep.TabIndex = 15;
+            this.txtcep.TabIndex = 8;
             // 
             // label9
             // 
@@ -324,7 +324,7 @@
             this.txtcelular.Mask = "(99) 0000-0000";
             this.txtcelular.Name = "txtcelular";
             this.txtcelular.Size = new System.Drawing.Size(140, 26);
-            this.txtcelular.TabIndex = 13;
+            this.txtcelular.TabIndex = 7;
             this.txtcelular.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox4_MaskInputRejected);
             // 
             // label8
@@ -344,7 +344,7 @@
             this.txttelefone.Mask = "(99) 000-0000";
             this.txttelefone.Name = "txttelefone";
             this.txttelefone.Size = new System.Drawing.Size(140, 26);
-            this.txttelefone.TabIndex = 11;
+            this.txttelefone.TabIndex = 6;
             this.txttelefone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox3_MaskInputRejected);
             // 
             // label7
@@ -364,7 +364,7 @@
             this.txtcpf.Mask = "###.###.###-##";
             this.txtcpf.Name = "txtcpf";
             this.txtcpf.Size = new System.Drawing.Size(151, 26);
-            this.txtcpf.TabIndex = 9;
+            this.txtcpf.TabIndex = 5;
             // 
             // label6
             // 
@@ -382,7 +382,7 @@
             this.txtrg.Mask = "##.###.###-##";
             this.txtrg.Name = "txtrg";
             this.txtrg.Size = new System.Drawing.Size(151, 26);
-            this.txtrg.TabIndex = 7;
+            this.txtrg.TabIndex = 3;
             // 
             // label5
             // 
@@ -399,7 +399,7 @@
             this.txtnome.Location = new System.Drawing.Point(146, 95);
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(356, 26);
-            this.txtnome.TabIndex = 5;
+            this.txtnome.TabIndex = 2;
             this.txtnome.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label4
@@ -418,7 +418,7 @@
             this.txtemail.Location = new System.Drawing.Point(146, 148);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(356, 26);
-            this.txtemail.TabIndex = 3;
+            this.txtemail.TabIndex = 4;
             // 
             // label3
             // 
@@ -427,7 +427,7 @@
             this.label3.Location = new System.Drawing.Point(88, 151);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 18);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 20;
             this.label3.Text = "Email:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 

@@ -34,3 +34,4 @@ C:\Users\Acer\OneDrive\Documentos\C# 3 projeto\ProjetoVendas\obj\Debug\ProjetoVe
 C:\Users\Acer\OneDrive\Documentos\C# 3 projeto\ProjetoVendas\obj\Debug\ProjetoVendas.pdb
 C:\Users\Acer\OneDrive\Documentos\C# 3 projeto\ProjetoVendas\obj\Debug\ProjetoVendas.br.com.vendas.view.FrmFuncionarios.resources
 C:\Users\Acer\OneDrive\Documentos\C# 3 projeto\ProjetoVendas\obj\Debug\ProjetoVendas.br.com.vendas.view.FrmFornecedor.resources
+C:\Users\Acer\OneDrive\Documentos\C# 3 projeto\ProjetoVendas\obj\Debug\ProjetoVendas.br.com.vendas.view.FrmProduto.resources

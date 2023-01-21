@@ -232,27 +232,7 @@ namespace ProjetoVendas.br.com.vendas.view
 
         private void tabelaFuncionario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // pegar os dados da linha selecionada
-            txtcodigo.Text = tabelaFuncionario.CurrentRow.Cells[0].Value.ToString();
-            txtnome.Text = tabelaFuncionario.CurrentRow.Cells[1].Value.ToString();
-            txtrg.Text = tabelaFuncionario.CurrentRow.Cells[2].Value.ToString();
-            txtcpf.Text = tabelaFuncionario.CurrentRow.Cells[3].Value.ToString();
-            txtemail.Text = tabelaFuncionario.CurrentRow.Cells[4].Value.ToString();
-            txtsenha.Text = tabelaFuncionario.CurrentRow.Cells[5].Value.ToString();
-            cbcargo.Text = tabelaFuncionario.CurrentRow.Cells[6].Value.ToString();
-            cbnivel.Text = tabelaFuncionario.CurrentRow.Cells[7].Value.ToString();
-            txttelefone.Text = tabelaFuncionario.CurrentRow.Cells[8].Value.ToString();
-            txtcelular.Text = tabelaFuncionario.CurrentRow.Cells[9].Value.ToString();
-            txtcep.Text = tabelaFuncionario.CurrentRow.Cells[10].Value.ToString();
-            txtendereco.Text = tabelaFuncionario.CurrentRow.Cells[11].Value.ToString();
-            txtnumero.Text = tabelaFuncionario.CurrentRow.Cells[12].Value.ToString();
-            txtcomplemento.Text = tabelaFuncionario.CurrentRow.Cells[13].Value.ToString();
-            txtbairro.Text = tabelaFuncionario.CurrentRow.Cells[14].Value.ToString();
-            txtcidade.Text = tabelaFuncionario.CurrentRow.Cells[15].Value.ToString();
-            txtuf.Text = tabelaFuncionario.CurrentRow.Cells[16].Value.ToString();
-
-            //Alterar para a gui Dados Pessoais
-            tabControl1.SelectedTab = tabPage1;
+            
         }
 
         private void txtcodigo_TextChanged(object sender, EventArgs e)
@@ -278,6 +258,31 @@ namespace ProjetoVendas.br.com.vendas.view
         private void tabFuncionario_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tabelaFuncionario_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // pegar os dados da linha selecionada
+            txtcodigo.Text = tabelaFuncionario.CurrentRow.Cells[0].Value.ToString();
+            txtnome.Text = tabelaFuncionario.CurrentRow.Cells[1].Value.ToString();
+            txtrg.Text = tabelaFuncionario.CurrentRow.Cells[2].Value.ToString();
+            txtcpf.Text = tabelaFuncionario.CurrentRow.Cells[3].Value.ToString();
+            txtemail.Text = tabelaFuncionario.CurrentRow.Cells[4].Value.ToString();
+            txtsenha.Text = tabelaFuncionario.CurrentRow.Cells[5].Value.ToString();
+            cbcargo.Text = tabelaFuncionario.CurrentRow.Cells[6].Value.ToString();
+            cbnivel.Text = tabelaFuncionario.CurrentRow.Cells[7].Value.ToString();
+            txttelefone.Text = tabelaFuncionario.CurrentRow.Cells[8].Value.ToString();
+            txtcelular.Text = tabelaFuncionario.CurrentRow.Cells[9].Value.ToString();
+            txtcep.Text = tabelaFuncionario.CurrentRow.Cells[10].Value.ToString();
+            txtendereco.Text = tabelaFuncionario.CurrentRow.Cells[11].Value.ToString();
+            txtnumero.Text = tabelaFuncionario.CurrentRow.Cells[12].Value.ToString();
+            txtcomplemento.Text = tabelaFuncionario.CurrentRow.Cells[13].Value.ToString();
+            txtbairro.Text = tabelaFuncionario.CurrentRow.Cells[14].Value.ToString();
+            txtcidade.Text = tabelaFuncionario.CurrentRow.Cells[15].Value.ToString();
+            txtuf.Text = tabelaFuncionario.CurrentRow.Cells[16].Value.ToString();
+
+            //Alterar para a gui Dados Pessoais
+            tabControl1.SelectedTab = tabPage1;
         }
     }
     

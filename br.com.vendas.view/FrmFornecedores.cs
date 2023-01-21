@@ -67,7 +67,7 @@ namespace ProjetoVendas.br.com.vendas.view
             obj.Cidade = txtcidade.Text;
             obj.Estado = txtuf.Text;
 
-            //Criar um objeto da classe ClienteDAO e chammar o metado cadastraCliente
+            //Criar um objeto da classe ClienteDAO e chamar o metado cadastraCliente
             FornecedorDAO dao = new FornecedorDAO();
             dao.CadastrarFornecedor(obj);
 
@@ -178,29 +178,36 @@ namespace ProjetoVendas.br.com.vendas.view
 
         private void tabelaFornecedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // pegar os dados da linha selecionada
-            txtcodigo.Text = tabelaFornecedor.CurrentRow.Cells[1].Value.ToString();
-            txtcnpj.Text = tabelaFornecedor.CurrentRow.Cells[2].Value.ToString();
-            txtnome.Text = tabelaFornecedor.CurrentRow.Cells[3].Value.ToString();
-            txtemail.Text = tabelaFornecedor.CurrentRow.Cells[4].Value.ToString();
-            txtcep.Text = tabelaFornecedor.CurrentRow.Cells[5].Value.ToString();
-            txtnumero.Text = tabelaFornecedor.CurrentRow.Cells[6].Value.ToString();
-            txtbairro.Text = tabelaFornecedor.CurrentRow.Cells[7].Value.ToString();
-            txtuf.Text = tabelaFornecedor.CurrentRow.Cells[8].Value.ToString();
-            txttelefone.Text = tabelaFornecedor.CurrentRow.Cells[9].Value.ToString();
-            txtcelular.Text = tabelaFornecedor.CurrentRow.Cells[10].Value.ToString();
-            txtcidade.Text = tabelaFornecedor.CurrentRow.Cells[11].Value.ToString();
-            txtendereco.Text = tabelaFornecedor.CurrentRow.Cells[12].Value.ToString();
-            txtcomplemento.Text = tabelaFornecedor.CurrentRow.Cells[13].Value.ToString();
             
-           
-            //Alterar para a gui Dados Pessoais
-            tabControl1.SelectedTab = tabPage1;
         }
 
         private void txtemail_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void tabelaFornecedor_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // pegar os dados da linha selecionada
+            txtcodigo.Text = tabelaFornecedor.CurrentRow.Cells[0].Value.ToString();
+            txtnome.Text = tabelaFornecedor.CurrentRow.Cells[1].Value.ToString();
+            txtcnpj.Text = tabelaFornecedor.CurrentRow.Cells[2].Value.ToString();          
+            txtemail.Text = tabelaFornecedor.CurrentRow.Cells[3].Value.ToString();
+            txttelefone.Text = tabelaFornecedor.CurrentRow.Cells[4].Value.ToString();
+            txtcelular.Text = tabelaFornecedor.CurrentRow.Cells[5].Value.ToString();
+            txtcep.Text = tabelaFornecedor.CurrentRow.Cells[6].Value.ToString();
+            txtendereco.Text = tabelaFornecedor.CurrentRow.Cells[7].Value.ToString();
+            txtnumero.Text = tabelaFornecedor.CurrentRow.Cells[8].Value.ToString();
+            txtcomplemento.Text = tabelaFornecedor.CurrentRow.Cells[9].Value.ToString();
+            txtbairro.Text = tabelaFornecedor.CurrentRow.Cells[10].Value.ToString();
+            txtcidade.Text = tabelaFornecedor.CurrentRow.Cells[11].Value.ToString();
+            txtuf.Text = tabelaFornecedor.CurrentRow.Cells[12].Value.ToString();
+
+
+            //Alterar para a gui Dados Pessoais
+            tabControl1.SelectedTab = tabPage1;
+        }
+
+        
     }
 }
