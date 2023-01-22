@@ -17,7 +17,7 @@ namespace ProjetoVendas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmProduto());
+            Application.Run(new FrmVendas());
         }
     }
 }

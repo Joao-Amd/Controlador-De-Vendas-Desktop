@@ -237,5 +237,52 @@ namespace ProjetoVendas.br.com.vendas.dao
 
         }
         #endregion
+
+
+        #region RetornarProdutoPorCodigo
+        public Produtos RetonarProdutoPorCodigo(int id)
+        {
+            try
+            {
+                // Criar o comando sql e o objeto Cliente
+                Produtos obj = new Produtos();
+                string sql = @"select  * from tb_produtos where id = @id";
+
+                //Organizar  o comando sql e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, Conexao);
+                executacmd.Parameters.AddWithValue("@id", id);
+
+                Conexao.Open();
+
+                //criar o MySqlDataReader
+                MySqlDataReader rs = executacmd.ExecuteReader();
+
+                if (rs.Read())
+                {
+                    obj.Id = rs.GetInt32("id");
+                    obj.Descricao = rs.GetString("descricao");
+                    obj.Preco = rs.GetDecimal("preco");
+
+                    Conexao.Close();
+                    return obj;
+                }
+                else
+                {
+                    MessageBox.Show("Produto não encontrato");
+                    Conexao.Close();
+                    return null;
+                }
+                return obj;
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao executar o comando sql: " + erro);
+                return null;
+            }
+        }
+
+        #endregion
     }
 }

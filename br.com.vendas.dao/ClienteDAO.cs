@@ -243,7 +243,44 @@ namespace ProjetoVendas.br.com.vendas.dao
 
         #endregion
 
-        
+        #region RetornaClientePorCpf
+
+        public Cliente RetonarClientePorCpf(string cpf)
+        {
+            try
+            {
+                // Criar o comando sql e o objeto Cliente
+                Cliente obj = new Cliente();
+                string sql = @"select  * from tb_clientes where cpf = @cpf";
+
+                //Organizar  o comando sql e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, Conexao);
+                executacmd.Parameters.AddWithValue("@cpf", cpf);
+
+                Conexao.Open();
+                MySqlDataReader rs = executacmd.ExecuteReader();
+
+                if (rs.Read())
+                {
+                    obj.Codigo = rs.GetInt32("id");
+                    obj.Nome = rs.GetString("nome");
+                }
+                else
+                {
+                    MessageBox.Show("Cliente não encontrato");
+                }
+                return obj;
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao executar o comando sql: " + erro);
+                return null;
+            }
+        }
+
+        #endregion
 
 
     }

@@ -68,6 +68,7 @@
             this.btnexcluir = new System.Windows.Forms.Button();
             this.btnsalvar = new System.Windows.Forms.Button();
             this.btnnovo = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -446,7 +447,6 @@
             this.tabelaFornecedor.TabIndex = 9;
             this.tabelaFornecedor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaFornecedor_CellClick);
             this.tabelaFornecedor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaFornecedor_CellContentClick);
-            
             // 
             // btnpesquisa
             // 
@@ -593,5 +593,6 @@
         private System.Windows.Forms.Button btnexcluir;
         private System.Windows.Forms.Button btnsalvar;
         private System.Windows.Forms.Button btnnovo;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
