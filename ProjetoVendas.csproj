@@ -88,7 +88,9 @@
     <Compile Include="br.com.vendas.dao\ClienteDAO.cs" />
     <Compile Include="br.com.vendas.dao\FornecedorDAO.cs" />
     <Compile Include="br.com.vendas.dao\FuncionarioDAO.cs" />
+    <Compile Include="br.com.vendas.dao\ItemVendasDAO.cs" />
     <Compile Include="br.com.vendas.dao\ProdutoDAO.cs" />
+    <Compile Include="br.com.vendas.dao\VendasDAO.cs" />
     <Compile Include="br.com.vendas.model\Cliente.cs" />
     <Compile Include="br.com.vendas.model\Fornecedor.cs" />
     <Compile Include="br.com.vendas.model\Funcionario.cs" />
@@ -96,6 +98,12 @@
     <Compile Include="br.com.vendas.model\ItemVendas.cs" />
     <Compile Include="br.com.vendas.model\Produtos.cs" />
     <Compile Include="br.com.vendas.model\Venda.cs" />
+    <Compile Include="br.com.vendas.view\FrmPagamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.vendas.view\FrmPagamentos.Designer.cs">
+      <DependentUpon>FrmPagamentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.vendas.view\FrmProduto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.vendas.view\FrmFuncionarios.resx">
       <DependentUpon>FrmFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.vendas.view\FrmPagamentos.resx">
+      <DependentUpon>FrmPagamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.vendas.view\FrmProduto.resx">
       <DependentUpon>FrmProduto.cs</DependentUpon>

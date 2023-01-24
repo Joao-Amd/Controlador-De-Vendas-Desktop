@@ -407,6 +407,7 @@
             this.txtcodigo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcodigo.Location = new System.Drawing.Point(146, 25);
             this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.ReadOnly = true;
             this.txtcodigo.Size = new System.Drawing.Size(87, 26);
             this.txtcodigo.TabIndex = 1;
             // 

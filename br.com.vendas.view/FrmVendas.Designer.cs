@@ -105,7 +105,7 @@
             // 
             this.txtdata.Location = new System.Drawing.Point(68, 39);
             this.txtdata.Name = "txtdata";
-            this.txtdata.Size = new System.Drawing.Size(151, 26);
+            this.txtdata.Size = new System.Drawing.Size(123, 26);
             this.txtdata.TabIndex = 13;
             // 
             // label8
@@ -142,7 +142,7 @@
             this.txtcpf.Location = new System.Drawing.Point(68, 81);
             this.txtcpf.Mask = "###.###.###-##";
             this.txtcpf.Name = "txtcpf";
-            this.txtcpf.Size = new System.Drawing.Size(151, 26);
+            this.txtcpf.Size = new System.Drawing.Size(123, 26);
             this.txtcpf.TabIndex = 9;
             this.txtcpf.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtcpf_MaskInputRejected);
             this.txtcpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcpf_KeyPress);
@@ -304,6 +304,7 @@
             // 
             this.txttotal.Location = new System.Drawing.Point(95, 33);
             this.txttotal.Name = "txttotal";
+            this.txttotal.ReadOnly = true;
             this.txttotal.Size = new System.Drawing.Size(90, 26);
             this.txttotal.TabIndex = 11;
             this.txttotal.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -339,6 +340,7 @@
             this.btnpagamento.TabIndex = 34;
             this.btnpagamento.Text = "Pagamento";
             this.btnpagamento.UseVisualStyleBackColor = false;
+            this.btnpagamento.Click += new System.EventHandler(this.btnpagamento_Click);
             // 
             // FrmVendas
             // 

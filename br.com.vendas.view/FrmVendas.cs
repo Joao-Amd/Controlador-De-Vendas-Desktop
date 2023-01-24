@@ -114,32 +114,41 @@ namespace ProjetoVendas.br.com.vendas.view
 
         private void FrmVendas_Load(object sender, EventArgs e)
         {
-            
+            //Pegar a data atual
+            txtdata.Text = DateTime.Now.ToShortDateString();
         }
 
         private void btadcionar_Click(object sender, EventArgs e)
         {
-            //Botao adcionar item
+            try
+            {
+                //Botao adcionar item
 
-            quantidade = int.Parse(txtquantidade.Text);
-            preco = decimal.Parse(txtpreco.Text);
+                quantidade = int.Parse(txtquantidade.Text);
+                preco = decimal.Parse(txtpreco.Text);
 
-            subtotal = quantidade * preco;
+                subtotal = quantidade * preco;
 
-            totalizador += subtotal;
+                totalizador += subtotal;
 
-            //adcionar o produto no carrinho
-            carrinho.Rows.Add(int.Parse(txtcodigo.Text), txtdescricao.Text, quantidade, preco, subtotal);
+                //adcionar o produto no carrinho
+                carrinho.Rows.Add(int.Parse(txtcodigo.Text), txtdescricao.Text, quantidade, preco, subtotal);
 
-            txttotal.Text = totalizador.ToString();
+                txttotal.Text = totalizador.ToString();
 
-            //Limpar os campos
-            txtcodigo.Clear();
-            txtdescricao.Clear();
-            txtquantidade.Clear();
-            txtpreco.Clear();
+                //Limpar os campos
+                txtcodigo.Clear();
+                txtdescricao.Clear();
+                txtquantidade.Clear();
+                txtpreco.Clear();
 
-            txtcodigo.Focus();
+                txtcodigo.Focus();
+            }
+
+            catch (Exception erro)
+            {
+                MessageBox.Show("Digite o código do produto" + erro);
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -164,6 +173,18 @@ namespace ProjetoVendas.br.com.vendas.view
 
             MessageBox.Show("Item Removido do carrinho com sucesso!");
 
+        }
+
+        private void btnpagamento_Click(object sender, EventArgs e)
+        {
+            //Botão Pagamento
+            DateTime dataAtual = DateTime.Parse(txtdata.Text);
+            FrmPagamentos  tela = new FrmPagamentos(cliente, carrinho,dataAtual);
+
+            //Passando  o total para  tela de pagamentos
+
+            tela.txttotal.Text = totalizador.ToString();
+            tela.Show();
         }
     }
     
