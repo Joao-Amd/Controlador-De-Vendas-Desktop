@@ -12,7 +12,7 @@ namespace ProjetoVendas.br.com.vendas.model
         public int Id { get; set; }
         public int ClienteId { get; set; }
         public DateTime DataVenda { get; set; }
-        public int TotalVendas { get; set; }
+        public decimal TotalVendas { get; set; }
         public string Obs { get; set; }
     }
 }

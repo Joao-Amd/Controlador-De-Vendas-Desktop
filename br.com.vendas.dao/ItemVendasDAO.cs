@@ -25,12 +25,12 @@ namespace ProjetoVendas.br.com.vendas.dao
             try
             {
 
-                string sql = @"insert into tb_itensvendas (vendas_id, produto_id, qtd,subtotal) 
-                                    values(@vendas_id, @produto_id, @qtd, @subtotal)";
+                string sql = @"insert into tb_itensvendas (venda_id, produto_id, qtd,subtotal) 
+                                    values(@venda_id, @produto_id, @qtd, @subtotal)";
 
                 //éxecutar comando sql
                 MySqlCommand executacmd = new MySqlCommand(sql, Conexao);
-                executacmd.Parameters.AddWithValue("@vendas_id", obj.VendaId);
+                executacmd.Parameters.AddWithValue("@venda_id", obj.VendaId);
                 executacmd.Parameters.AddWithValue("@produto_id", obj.ProdutoId);
                 executacmd.Parameters.AddWithValue("@qtd", obj.Quantidade);
                 executacmd.Parameters.AddWithValue("@subtotal", obj.SubTotal);
@@ -38,7 +38,7 @@ namespace ProjetoVendas.br.com.vendas.dao
                 Conexao.Open();
                 executacmd.ExecuteNonQuery();
 
-                MessageBox.Show("Item  cadastrado com sucesso!");
+               
 
                 //Fechar a conexao
                 Conexao.Close();

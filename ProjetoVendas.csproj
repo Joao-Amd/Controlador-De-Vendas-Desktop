@@ -98,6 +98,12 @@
     <Compile Include="br.com.vendas.model\ItemVendas.cs" />
     <Compile Include="br.com.vendas.model\Produtos.cs" />
     <Compile Include="br.com.vendas.model\Venda.cs" />
+    <Compile Include="br.com.vendas.view\FrmHistoricoVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.vendas.view\FrmHistoricoVendas.Designer.cs">
+      <DependentUpon>FrmHistoricoVendas.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.vendas.view\FrmPagamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.vendas.view\FrmFuncionarios.resx">
       <DependentUpon>FrmFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.vendas.view\FrmHistoricoVendas.resx">
+      <DependentUpon>FrmHistoricoVendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.vendas.view\FrmPagamentos.resx">
       <DependentUpon>FrmPagamentos.cs</DependentUpon>

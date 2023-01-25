@@ -29,14 +29,14 @@ namespace ProjetoVendas.br.com.vendas.view
         decimal subtotal;
         decimal totalizador;
         //carrinho
-        DataTable  carrinho  =  new DataTable();
+        DataTable carrinho = new DataTable();
 
         public FrmVendas()
         {
-            
+
             InitializeComponent();
 
-            carrinho.Columns.Add("código", typeof(int));
+            carrinho.Columns.Add("Código", typeof(int));
             carrinho.Columns.Add("Produto", typeof(string));
             carrinho.Columns.Add("Quantidade", typeof(int));
             carrinho.Columns.Add("Preço", typeof(decimal));
@@ -93,11 +93,24 @@ namespace ProjetoVendas.br.com.vendas.view
         private void txtcpf_KeyPress(object sender, KeyPressEventArgs e)
         {
             //Busca cliente por cpf com a tecla enter
-            if(e.KeyChar == 13)
+            if (e.KeyChar == 13)
             {
                 cliente = cdao.RetonarClientePorCpf(txtcpf.Text);
-                txtnome.Text = cliente.Nome;
+
+                if (cliente != null)
+                {
+                    txtnome.Text = cliente.Nome;
+                }
+                else
+                {
+                    txtcpf.Clear();
+                    txtcpf.Focus();                  
+                }
             }
+
+           
+
+
         }
 
         private void txtcodigo_KeyPress(object sender, KeyPressEventArgs e)
@@ -106,8 +119,19 @@ namespace ProjetoVendas.br.com.vendas.view
             if (e.KeyChar == 13)
             {
                 produtos = pdao.RetonarProdutoPorCodigo(int.Parse(txtcodigo.Text));
-                txtdescricao.Text = produtos.Descricao;
-                txtpreco.Text = produtos.Preco.ToString();
+                if(produtos != null)
+                {
+                    txtdescricao.Text = produtos.Descricao;
+                    txtpreco.Text = produtos.Preco.ToString();
+                }
+
+                else
+                {                   
+                    txtcodigo.Clear();
+                    txtcodigo.Focus();
+                    MessageBox.Show("Produto não encontrado");
+                }
+                
             }
         }
 
@@ -179,13 +203,18 @@ namespace ProjetoVendas.br.com.vendas.view
         {
             //Botão Pagamento
             DateTime dataAtual = DateTime.Parse(txtdata.Text);
-            FrmPagamentos  tela = new FrmPagamentos(cliente, carrinho,dataAtual);
+            FrmPagamentos tela = new FrmPagamentos(cliente, carrinho, dataAtual);
 
             //Passando  o total para  tela de pagamentos
 
             tela.txttotal.Text = totalizador.ToString();
             tela.Show();
         }
+
+        private void txtpreco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-    
+
 }

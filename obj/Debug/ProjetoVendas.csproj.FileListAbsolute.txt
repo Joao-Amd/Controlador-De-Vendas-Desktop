@@ -37,3 +37,4 @@ C:\Users\Acer\OneDrive\Documentos\C# 3 projeto\ProjetoVendas\obj\Debug\ProjetoVe
 C:\Users\Acer\OneDrive\Documentos\C# 3 projeto\ProjetoVendas\obj\Debug\ProjetoVendas.br.com.vendas.view.FrmProduto.resources
 C:\Users\Acer\OneDrive\Documentos\C# 3 projeto\ProjetoVendas\obj\Debug\ProjetoVendas.br.com.vendas.view.FrmVendas.resources
 C:\Users\Acer\OneDrive\Documentos\C# 3 projeto\ProjetoVendas\obj\Debug\ProjetoVendas.br.com.vendas.view.FrmPagamentos.resources
+C:\Users\Acer\OneDrive\Documentos\C# 3 projeto\ProjetoVendas\obj\Debug\ProjetoVendas.br.com.vendas.view.FrmHistoricoVendas.resources

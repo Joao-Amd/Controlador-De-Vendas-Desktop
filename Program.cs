@@ -17,7 +17,7 @@ namespace ProjetoVendas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmVendas());
+            Application.Run(new FrmHistoricoVendas());
         }
     }
 }

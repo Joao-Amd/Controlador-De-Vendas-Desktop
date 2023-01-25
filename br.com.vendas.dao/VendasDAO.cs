@@ -3,6 +3,7 @@ using ProjetoVendas.br.com.vendas.conexao;
 using ProjetoVendas.br.com.vendas.model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,8 +36,7 @@ namespace ProjetoVendas.br.com.vendas.dao
 
                 Conexao.Open();
                 executacmd.ExecuteNonQuery();
-
-                MessageBox.Show("Venda cadastrado com sucesso!");
+             
 
                 //Fechar a conexao
                 Conexao.Close();
@@ -58,9 +58,10 @@ namespace ProjetoVendas.br.com.vendas.dao
             try
             {
                 int idVenda = 0;
-                String sql = "select  mas(id) id from  tb_vendas;";
-                MySqlCommand executacmdsql = new MySqlCommand(sql, Conexao);    
+                String sql = "select max(id) id from tb_vendas;";      
+                MySqlCommand executacmdsql = new MySqlCommand(sql, Conexao);
 
+                Conexao.Open();
                 MySqlDataReader rs = executacmdsql.ExecuteReader();
 
                 if (rs.Read())
@@ -79,6 +80,34 @@ namespace ProjetoVendas.br.com.vendas.dao
                 return 0;
             }
         }
+
+        #endregion
+
+        #region ExibirHistoricoVenda
+
+        public DataTable ExibirHistoricoVenda(DateTime dataInicio, DateTime dataFim)
+        {
+            try
+            {
+                //Criar o datatable e o comando sql
+                DataTable  tabelaHistorico = new DataTable();
+
+                string sql = @"select v.id 'Código',
+	                                  v.data_venda  'Data da Venda',
+	                                  c.nome 'Cliente',
+	                                  v.total_venda 'Total',
+	                                  v.observacoes 'Observação'
+                             from tb_vendas v join tb_clientes c  on (v.cliente_id = c.id)
+                             where v.data_venda between @datainicio and @datafim";
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro: " + erro);
+            }
+        }
+
 
         #endregion
     }

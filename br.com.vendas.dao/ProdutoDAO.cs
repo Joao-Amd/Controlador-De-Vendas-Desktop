@@ -284,5 +284,76 @@ namespace ProjetoVendas.br.com.vendas.dao
         }
 
         #endregion
+
+        #region BaixaEstoque
+        public void BaixarEstoque(int idProduto, int quantidadeEstoque)
+        {
+            try
+            {
+                //  definir o cmd sql  - Update
+                string sql = @"update tb_produtos set qtd_estoque=@qtd_estoque where id=@id";
+
+                //Organizar o cmd sql
+                MySqlCommand executacmd = new MySqlCommand(sql, Conexao);
+
+                executacmd.Parameters.AddWithValue("@@qtd_estoque", quantidadeEstoque);
+                executacmd.Parameters.AddWithValue("@id", idProduto);
+
+
+                // Abrir a conexao e executar o comando sql
+                Conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //Fechar a conexao
+                Conexao.Close();
+
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Aconteceu o erro" + erro);
+                Conexao.Close();
+            }
+        }
+
+
+        #endregion
+
+        #region retornarEstoqueAtual
+
+        public int retornarEstoqueAtual(int idProduto)
+        {
+            try
+            {
+                string sql = @"select qtd_estoque from tb_produtos where  id = @id";
+                int quantidadeEstoque = 0;
+                // organizar e executr o comando
+                MySqlCommand executacmd = new MySqlCommand(sql, Conexao);
+                executacmd.Parameters.AddWithValue("id", idProduto);
+
+                // Abrir a conexao e executar o comando sql
+                Conexao.Open();
+                
+                MySqlDataReader  rs = executacmd.ExecuteReader();
+
+                if (rs.Read())
+                {
+                    quantidadeEstoque = rs.GetInt32("qtd_estoque");
+                    Conexao.Close();
+                }
+
+                return quantidadeEstoque;
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Aconteceu o erro: " + erro);
+                return 0;
+            }
+        }
+
+        #endregion 
     }
 }
