@@ -3,6 +3,7 @@ using ProjetoVendas.br.com.vendas.conexao;
 using ProjetoVendas.br.com.vendas.model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,6 +48,48 @@ namespace ProjetoVendas.br.com.vendas.dao
             {
 
                 MessageBox.Show("Erro: " + erro);
+            }
+        }
+
+        #endregion
+
+        #region ListarItensVenda
+
+        public DataTable ListarItensVenda(int idVenda)
+        {
+            try
+            {
+                //Criar o datatable e o comando sql
+                DataTable tabelaItens = new DataTable();
+
+                string sql = @"select   i.id 'codigo',
+                                        p.descricao 'Descricao',
+                                        i.qtd 'Quantidade',
+                                        p.preco 'Preco',
+                                        i.subtotal 'SubTotal'
+                                        from tb_itensvendas i join
+                            tb_produtos p on (i.produto_id = p.id) where venda_id = @idVenda";
+
+                MySqlCommand executacmd = new MySqlCommand(sql, Conexao);
+                executacmd.Parameters.AddWithValue("@idVenda", idVenda);
+
+                Conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //Criar o MysqlDataAdapter para preencher os daodos no DataTable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaItens);
+
+                Conexao.Close();
+
+                return tabelaItens;
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro" + erro);
+                return null;
             }
         }
 

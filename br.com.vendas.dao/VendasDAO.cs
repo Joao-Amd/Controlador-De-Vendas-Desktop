@@ -100,14 +100,69 @@ namespace ProjetoVendas.br.com.vendas.dao
                              from tb_vendas v join tb_clientes c  on (v.cliente_id = c.id)
                              where v.data_venda between @datainicio and @datafim";
 
+                // Organizar e executar comando sql
+                MySqlCommand executacmdsql = new MySqlCommand(sql, Conexao);
+                executacmdsql.Parameters.AddWithValue("@datainicio", dataInicio);
+                executacmdsql.Parameters.AddWithValue("@datafim", dataFim);
+
+                Conexao.Open();
+                executacmdsql.ExecuteNonQuery();
+
+                //Criar o MysqlDataAdapter para preencher os daodos no DataTable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmdsql);  
+                da.Fill(tabelaHistorico);
+
+                Conexao.Close();
+
+                return tabelaHistorico;
             }
             catch (Exception erro)
             {
 
                 MessageBox.Show("Erro: " + erro);
+                return null;
             }
         }
 
+
+        #endregion
+
+        #region ListarVendas
+
+        public DataTable ListarVendas()
+        {
+            try
+            {
+                //Criar o datatable e o comando sql
+                DataTable tabelaHistorico = new DataTable();
+
+                string sql = @"select v.id 'Codigo',
+	                                  v.data_venda  'Data da Venda',
+	                                  c.nome 'Cliente',
+	                                  v.total_venda 'Total',
+	                                  v.observacoes 'Observacao'
+                             from tb_vendas v join tb_clientes c  on (v.cliente_id = c.id)";
+
+                MySqlCommand executacmd = new MySqlCommand(sql, Conexao);
+                Conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //Criar o MysqlDataAdapter para preencher os daodos no DataTable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaHistorico);
+
+                Conexao.Close();
+
+                return tabelaHistorico;
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro" + erro);
+                return null;
+            }
+        }
 
         #endregion
     }
