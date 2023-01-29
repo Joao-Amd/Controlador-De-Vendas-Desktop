@@ -110,6 +110,18 @@
     <Compile Include="br.com.vendas.view\FrmHistoricoVendas.Designer.cs">
       <DependentUpon>FrmHistoricoVendas.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.vendas.view\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.vendas.view\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.vendas.view\FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.vendas.view\FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.vendas.view\FrmPagamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +180,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.vendas.view\FrmHistoricoVendas.resx">
       <DependentUpon>FrmHistoricoVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.vendas.view\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.vendas.view\FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.vendas.view\FrmPagamentos.resx">
       <DependentUpon>FrmPagamentos.cs</DependentUpon>
